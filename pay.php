@@ -49,8 +49,8 @@ function callPaymentApi($orderCode, $orderAmount,$type) {
         'pid' => $merchant_id,
         'type' => $type, // 支付方式，您可以选择 'wxpay' 或其他方式
         'out_trade_no' => $orderCode, // 商户订单号
-        'notify_url' => $config['api_url'].'/notify.php', // 异步通知地址
-        'return_url' => $config['api_url'].'/return.php', // 页面跳转通知地址
+        'notify_url' => "http://yourdomain.com".'/notify.php', // 异步通知地址 请注意这里应该改为当前网站！！
+        'return_url' => "http://yourdomain.com".'/return.php', // 页面跳转通知地址 请注意这里应该改为当前网站！！
         'name' => 'VIP会员', // 商品名称
         'money' => $orderAmount, // 订单金额
         'sign_type' => "MD5"
