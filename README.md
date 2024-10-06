@@ -19,8 +19,9 @@
 
 1. 将 `config.php` 文件中的 `api_url`、`api_pid` 和 `api_key` 替换为您的易支付信息。
 2. 将 `config.php` 文件中的 `godege_api_url` `goedge_access_id` `goedge_access_key` 替换为您的CDN系统信息。
-3. 使用 `GoEdgeEPay::callPaymentApi` 发起支付。
-4. 使用 `notify.php` 和 `return.php` 处理支付结果通知。
+3. 将 `notify.php` 文件中 52,53 行修改为当前网站的地址。
+4. 使用 `GoEdgeEPay::callPaymentApi` 发起支付。
+5. 使用 `notify.php` 和 `return.php` 处理支付结果通知。
 
 ## 注意事项
 
