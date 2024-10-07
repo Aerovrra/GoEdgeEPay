@@ -32,7 +32,8 @@ function auth()
         "code"=>$orderCode,
     ];
     $status = sendPostJson($config['goedge_api_url']."/UserOrderService/findEnabledUserOrder",json_encode($code,true),$token);
-    if ($status['code'] != 200 or $status['data']['userOrder']['code'] != $orderCode) {
+    $status_decode = json_decode($status,true);
+    if ($status_decode['code'] != 200 or $status_decode['data']['userOrder']['code'] != $orderCode) {
         exit("验证失败");
     }
 }
